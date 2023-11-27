@@ -10,8 +10,8 @@
 </head>
 
 <body> <!--Starting with the body and placing "divs" for now but will distinguish and attach appropriate schemantic elements-->
-    <div id="header"> <!--Added an ID "header" since this will be only element where this selector will be used and so style sheet will only style this element-->
-        <div class="container"> <!--Added a class "container" since I may use this selector again and would like the style sheet to style these elements the same-->
+    <section id="header"> <!--Added an ID "header" since this will be only element where this selector will be used and so style sheet will only style this element-->
+        <section class="container"> <!--Added a class "container" since I may use this selector again and would like the style sheet to style these elements the same-->
             <nav> <!--Nav links, these links will contain certain information on the page that these link can jump to while a user browses my page-->
                 <img src="/Yash-s-Personal-Portfolio/Images/Eo_circle_pink_letter-y.svg" class="logo"> <!--Adding an image of self under class=logo for now to meet criteria, but I think I will add more images later in html and via style sheet-->
                 <h1>Yash Baviskar</h1> 
@@ -25,87 +25,87 @@
                 </ul>
                 <i class="fa-solid fa-bars icon1" onclick="openmenu()"></i> <!--onlick item for media query-->
             </nav>
-            <div class="header-text"> <!--Small intro to myself, prior to jumping all over the webpage via nav links--> 
+            <section class="header-text"> <!--Small intro to myself, prior to jumping all over the webpage via nav links--> 
                 <p>UI/UX Designer</p>
-                <h1> Hi, I'm Yash Baviskar<br>From Houston, Texas!</h1>
-            </div>
-        </div> <!--I think, so far I have completed the criteria for dev's name, a recent photo/avatar, and links that scroll to sections about them, their work, and how to contact them-->
-    </div> <!--For now using divs to speed through and map out this code, still need to reorganize all of the above and practice proper user of schemantic elements-->
+                <h1> Hi, I'm Yash!<br>From Houston, Texas</h1>
+            </section>
+        </section> <!--I think, so far I have completed the criteria for dev's name, a recent photo/avatar, and links that scroll to sections about them, their work, and how to contact them-->
+    </section> <!--For now using divs to speed through and map out this code, still need to reorganize all of the above and practice proper user of schemantic elements-->
     <!--Additionally as the assigment allows I will be using certain placeholders content since this will be a work in progress-->
 
     <!--The first section of one of the nav links, about me-->
 
-    <div id="about"> <!--Added ID "about" for style sheet-->
-        <div class="container"> <!--Added class "container", this will share styles from container above. I want to keep my website/porfolio simple and uniform for now-->
-            <div class="row"> 
-                <div class="about-col-1">    
+    <section id="about"> <!--Added ID "about" for style sheet-->
+        <section class="container"> <!--Added class "container", this will share styles from container above. I want to keep my website/porfolio simple and uniform for now-->
+            <section class="row"> 
+                <section class="about-col-1">    
                     <img src="/Yash-s-Personal-Portfolio/Images/IMG_5010.jpeg"> 
-                </div>
-                <div class="about-col-2">
+                </section>
+                <section class="about-col-2">
                     <h1 class="subtitle">About Me</h1>
                     <p> Write a quick about me paragraph here!</p>
-                    <div class="tabtitles">
+                    <section class="tabtitles">
                         <p class="tablinks activelink" onclick="opentab('Skills')">Skills</p>
                         <p class="tablinks" onclick="opentab('Experience')">Experience</p>
                         <p class="tablinks" onclick="opentab('Education')">Education</p>
-                    </div>
-                    <div class="tabcontents activetab" id="Skills">
+                    </section>
+                    <section class="tabcontents activetab" id="Skills">
                         <ul>
                             <li><span>Placeholder I</span><br>HTML</li>
                             <li><span>Placeholder II</span><br>CSS</li>
                             <li><span>Placeholder III</span><br>JavaScript</li>
                         </ul>
-                    </div>    
-                    <div class="tabcontents" id="Experience">
+                    </section>    
+                    <section class="tabcontents" id="Experience">
                         <ul>
                             <li><span>Placeholder I</span><br>Designing Web/App type I</li>
                             <li><span>Placeholder II</span><br>Designing Web/App type II</li>
                             <li><span>Placeholder III</span><br>Designing Web/App type III</li>
                         </ul>
-                    </div>    
-                    <div class="tabcontents" id="Education">
+                    </section>    
+                    <section class="tabcontents" id="Education">
                         <ul>
                             <li><span>Placeholder I</span><br>High School</li>
                             <li><span>Placeholder II</span><br>College</li>
                             <li><span>Placeholder III</span><br>Boot Camp</li>
                         </ul>
-                    </div>    
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="portfolio"> <!--Scrolling to my work via nav link "Portfolio" should meet criteria UI Scrolling to dev's applications, application's image should be larger in size than the others (see css sheet for the style line 138-200)-->
-        <div class="container">
+                    </section>    
+                </section>
+            </section>
+        </section>
+    </section>
+    <section id="portfolio"> <!--Scrolling to my work via nav link "Portfolio" should meet criteria UI Scrolling to dev's applications, application's image should be larger in size than the others (see css sheet for the style line 138-200)-->
+        <section class="container">
             <h1 class="subtitle">My Work & Applications</h1>
-            <div class="worklist">
-                <div class="work">
+            <section class="worklist">
+                <section class="work">
                     <img src="Images/Horiseon.png">
-                    <div class="layer">
+                    <section class="layer">
                         <h3>Coding Boot Camp Module I</h3>
                         <p>My first webapp deployment via github/pages!</p>
                         <a href="https://yoboyyash.github.io/Horiseon-Social-Solution-/" target="_blank"><i class="fa-solid fa-link"></i></a> <!--Meets criteria of clicking on image to be taken to deployed applications link-->
-                    </div>
-                </div>
-                <div class="work"> 
+                    </section>
+                </section>
+                <section class="work"> 
                     <img src="Images/16.jpg">
-                    <div class="layer">
+                    <section class="layer">
                         <h3>Placeholder I</h3>
                         <p>Discription !!</p>
                         <a href="" target="_blank"><i class="fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-                <div class="work">
+                    </section>
+                </section>
+                <section class="work">
                     <img src="Images/16.jpg">
-                    <div class="layer">
+                    <section class="layer">
                         <h3>Placeholder II</h3>
                         <p>Discription !!</p>
                         <a href="" target="_blank"><i class="fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-            </div>
+                    </section>
+                </section>
+            </section>
             <a href="https://github.com/yoboyyash/Yash-Personal-Portfolio" target="-blank" class="btn">See More</a> <!--For now adding my GitHub repo for this webapp but will make this a dropdown interactive space later for more-->
-        </div>
-    </div>
+        </section>
+    </section>
 
 <!--Yet to fully understand script since we just started it in class this week but I was able to make the following inline code for now. When I add more script I will do so in .js-->
     <script> 
