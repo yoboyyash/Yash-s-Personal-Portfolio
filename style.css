@@ -11,7 +11,7 @@ body{ /* --These declared properties and values apply to the element body -- */
 #header{ /* --Added a background image in header so I can size and manipulate it to cover the page (will see how this works accross handheld devices) with my nav links in front of it --*/
     width: 100%;
     height: 250vh;
-    background-image: url(/Yash-s-Personal-Portfolio/Images/Yash3.jpg);
+    background-image:url(/Yash-s-Personal-Portfolio/Images/Yash3.jpg);
     background-size: cover;
     background-position: center;
 }
