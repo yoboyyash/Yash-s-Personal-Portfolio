@@ -1,0 +1,154 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> <!--Made a new HTML file, and started code with the "html : 5"-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Added compatibility-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Added scale, still to figure out scaling for handheld devices-->
+    <title>Yash Baviskar</title>
+    <link rel="stylesheet" href="/Yash-Personal-Portfolio/style.css"> <!--Created a style sheet and link relation-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> <!-- Learned this via w3schools.com, linking icons locally or from weblink-->
+</head>
+
+<body> <!--Starting with the body and placing "divs" for now but will distinguish and attach appropriate schemantic elements-->
+    <div id="header"> <!--Added an ID "header" since this will be only element where this selector will be used and so style sheet will only style this element-->
+        <div class="container"> <!--Added a class "container" since I may use this selector again and would like the style sheet to style these elements the same-->
+            <nav> <!--Nav links, these links will contain certain information on the page that these link can jump to while a user browses my page-->
+                <img src="/Yash-Personal-Portfolio/Images/Eo_circle_pink_letter-y.svg" class="logo"> <!--Adding an image of self under class=logo for now to meet criteria, but I think I will add more images later in html and via style sheet-->
+                <h1>Yash Baviskar</h1> 
+                <ul id="sidemenu"> <!--Added ID "sidemenu" to run script function open and closemenu for media query-->
+                    <!--List items with hypertext refrence that scroll to each of the corresponding areas on the webpage via css, html scroll-behavior-->
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>               
+                    <i class="fa-regular fa-circle-xmark icon2" onclick="closemenu()"></i> <!--onlick item for media query-->
+                </ul>
+                <i class="fa-solid fa-bars icon1" onclick="openmenu()"></i> <!--onlick item for media query-->
+            </nav>
+            <div class="header-text"> <!--Small intro to myself, prior to jumping all over the webpage via nav links--> 
+                <p>UI/UX Designer</p>
+                <h1> Hi, I'm Yash Baviskar<br>From Houston, Texas!</h1>
+            </div>
+        </div> <!--I think, so far I have completed the criteria for dev's name, a recent photo/avatar, and links that scroll to sections about them, their work, and how to contact them-->
+    </div> <!--For now using divs to speed through and map out this code, still need to reorganize all of the above and practice proper user of schemantic elements-->
+    <!--Additionally as the assigment allows I will be using certain placeholders content since this will be a work in progress-->
+
+    <!--The first section of one of the nav links, about me-->
+
+    <div id="about"> <!--Added ID "about" for style sheet-->
+        <div class="container"> <!--Added class "container", this will share styles from container above. I want to keep my website/porfolio simple and uniform for now-->
+            <div class="row"> 
+                <div class="about-col-1">    
+                    <img src="/Yash-Personal-Portfolio/Images/IMG_5010.jpeg"> 
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p> Write a quick about me paragraph here!</p>
+                    <div class="tabtitles">
+                        <p class="tablinks activelink" onclick="opentab('Skills')">Skills</p>
+                        <p class="tablinks" onclick="opentab('Experience')">Experience</p>
+                        <p class="tablinks" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tabcontents activetab" id="Skills">
+                        <ul>
+                            <li><span>Placeholder I</span><br>HTML</li>
+                            <li><span>Placeholder II</span><br>CSS</li>
+                            <li><span>Placeholder III</span><br>JavaScript</li>
+                        </ul>
+                    </div>    
+                    <div class="tabcontents" id="Experience">
+                        <ul>
+                            <li><span>Placeholder I</span><br>Designing Web/App type I</li>
+                            <li><span>Placeholder II</span><br>Designing Web/App type II</li>
+                            <li><span>Placeholder III</span><br>Designing Web/App type III</li>
+                        </ul>
+                    </div>    
+                    <div class="tabcontents" id="Education">
+                        <ul>
+                            <li><span>Placeholder I</span><br>High School</li>
+                            <li><span>Placeholder II</span><br>College</li>
+                            <li><span>Placeholder III</span><br>Boot Camp</li>
+                        </ul>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio"> <!--Scrolling to my work via nav link "Portfolio" should meet criteria UI Scrolling to dev's applications, application's image should be larger in size than the others (see css sheet for the style line 138-200)-->
+        <div class="container">
+            <h1 class="subtitle">My Work & Applications</h1>
+            <div class="worklist">
+                <div class="work">
+                    <img src="Images/Horiseon.png">
+                    <div class="layer">
+                        <h3>Coding Boot Camp Module I</h3>
+                        <p>My first webapp deployment via github/pages!</p>
+                        <a href="https://yoboyyash.github.io/Horiseon-Social-Solution-/" target="_blank"><i class="fa-solid fa-link"></i></a> <!--Meets criteria of clicking on image to be taken to deployed applications link-->
+                    </div>
+                </div>
+                <div class="work"> 
+                    <img src="Images/16.jpg">
+                    <div class="layer">
+                        <h3>Placeholder I</h3>
+                        <p>Discription !!</p>
+                        <a href="" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/16.jpg">
+                    <div class="layer">
+                        <h3>Placeholder II</h3>
+                        <p>Discription !!</p>
+                        <a href="" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/yoboyyash/Yash-Personal-Portfolio" target="-blank" class="btn">See More</a> <!--For now adding my GitHub repo for this webapp but will make this a dropdown interactive space later for more-->
+        </div>
+    </div>
+
+<!--Yet to fully understand script since we just started it in class this week but I was able to make the following inline code for now. When I add more script I will do so in .js-->
+    <script> 
+        var tablinks = document.getElementsByClassName("tablinks");
+        var tabcontents = document.getElementsByClassName("tabcontents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("activelink");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("activetab");
+            }
+            event.currentTarget.classList.add("activelink");
+            document.getElementById(tabname).classList.add("activetab");
+        }
+    </script>
+    
+    <script> 
+        
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0px";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+    
+    <footer> <!--Will work and improve this section more in future so that it in more interactive and has social media and more information-->
+        <section id="contact">
+            <section class="container">
+                <h1>Contact Me!</h1>
+                <ul>
+                    <li>Yashraj Baviskar</li>
+                    <li>yashrajbaviskar@gmail.com</li>
+                    <li>(832) 335-4262</li>
+                </ul>
+            </section>
+        </section>
+    </footer>
+
+</body>
+</html>

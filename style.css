@@ -1,0 +1,309 @@
+*{ /* --Learned from my mistake in Module 1 assignment and will be adding notes to style sheet also --*/
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+} /* --Declarations from line 2-3 is adding properties and values to the the page which are 0 so the content will be end to end --*/ 
+body{ /* --These declared properties and values apply to the element body -- */
+    background: #080808;
+    color: #ce1b1b;
+}
+#header{ /* --Added a background image in header so I can size and manipulate it to cover the page (will see how this works accross handheld devices) with my nav links in front of it --*/
+    width: 100%;
+    height: 250vh;
+    background-image: url(/Yash-Personal-Portfolio/Images/Yash3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container{ /* --Added padding to class=container -- */
+    padding: 10px 10%;
+}
+
+nav{ /* --Properties and values for element nav -- */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{ /* --Class, since I may use that logo again want it the same elsewhere -- */
+    width: 140px;
+}
+/* --Following two to style nav element and the unordered list, with list items within. All of which are within header because that is how I would place them at top -- */
+nav ul li{ 
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: blue;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+} 
+nav ul li a::after{ /* --Following two to add effect of underline when cursor hovers over list items -- */
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{ /* --Following three for class=header and h1 element within --*/
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+/* --Starting styling about me, under "about ID" added everything under class. Nothing new until tabtitles and tablinks -- */
+ #about{
+    padding: 80px 0;
+    color: #ababab;
+ }
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.subtitle{
+    font-size: 60px;
+    font-weight: 600px;
+    color: #fff;
+}
+/* --Tabtitles has no hover but has tablinks (more information on the appropriate tabtitles) which only show when clicked on -- */ 
+.tabtitles{ /* -- These are all the styles for it, please see html for script loop -- */
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tablinks{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tablinks::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tablinks.activelink::after{
+    width: 75%;
+}
+
+.tabcontents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tabcontents ul li span{
+    color: purple;
+    font-size: 14px;
+}
+.tabcontents{
+    display: none;
+}
+.tabcontents.activetab{
+    display: block;
+}
+
+/* --Starting styling portflio -- */
+#portfolio{
+    padding: 50px 0; 
+}
+.worklist{
+    color: yellow;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0%;
+    /* --background: linear-gradient(rgba(0,0,0,0.1), #ff004f); --*/ /* -- add in the future -- */
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 15px;
+    transition: height 0.8s;
+}
+.layer h3{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 50px;
+    background: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(3.0);
+}
+.work:hover .layer{
+    height: 100%
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid yellowgreen;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: yellowgreen;
+
+}
+
+/* --Navigation-- */
+html{
+    scroll-behavior: smooth;
+}
+
+/* --Media query, Handheld devices-- */
+
+.icon1 {
+    color: black;
+    font-size: 50px;
+}
+.icon2 {
+    color: black;
+    font-size: 50px;
+}
+
+nav .icon1 {
+    display: none;
+}
+nav .icon2 {
+    display: none;
+}
+
+footer h1{
+    text-align: center;
+    font-size: 30px;
+}
+footer ul li{
+    text-align: center;
+    list-style-type: none;
+
+}
+
+/* --Setting screen max-width to 600px so we see how the below code will apply to all phone like devices below width 600px but won't apply to tablet devices with higher width-- */
+/* --In the future when I continue working on this website I will add seprate code for the mid size devices such as tablets-- */
+@media only screen and (max-width: 600px){ 
+    #header{
+        background-image: url(Images/HandheldDevices/Yash3.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .icon1{
+        display: block;
+    }
+    nav .icon2{
+        display: block;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        transition: 0.5s;
+    }
+    nav ul li{ 
+        display: block;
+        margin: 25%;
+    }
+    nav ul .icon1{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    nav ul .icon2{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 35px;
+    }
+}
+/* --I understand the reason to code media query and the importance of it in the modern era since we all use devices that have different fixed resolutions--*/
+/* --It serves as a stylesheet within a stylesheet, which implements mostly sizing to existing declarations, but we can also add/remove things, double the work but I love it! Yay!--*/
+
+
+
+
+
+
