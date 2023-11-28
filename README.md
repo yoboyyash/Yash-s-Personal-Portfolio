@@ -1,7 +1,7 @@
 # Yash-Personal-Portfolio
 ## Yash's Personal Portfolio, live website to exhibit skills and showcasing professional assets. An elaborated resume!
 
-![Alt text](/Yash-s-Personal-Portfolio/Images/Screenshot%202023-11-27%20150435.png)
+![Alt text](/Images/Screenshot%202023-11-27%20150435.png)
 
 This project is helping me build a webapp without any starter code so that I know how to go about creating a full webpage with stylesheet and script. Along with being tested on understanding of creating a webapp I am adding something valuable to my job seeking tools. Every part of this project is sample code which shows how to do the following:
 
